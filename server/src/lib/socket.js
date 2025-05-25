@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*", // Allow all origins for simplicity; adjust as needed
+    origin: ["https://heichat.vercel.app", "http://localhost:5173"], // Allow all origins for simplicity; adjust as needed
     methods: ["GET", "POST"],
   },
 });

@@ -11,7 +11,6 @@ const ChatContainer = () => {
   const { messages, isMessagesLoading, selectedUser } = useSelector(
     (state) => state.chat
   );
-  console.log("Messages:", messages);
   const { authUser } = useSelector((state) => state.auth);
 
   useEffect(() => {

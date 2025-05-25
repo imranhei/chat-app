@@ -16,7 +16,7 @@ export const connectSocket = (userId, dispatch) => {
     );
 
     socket.on("connect", () => {
-      console.log("Socket connected:", socket.id);
+      // console.log("Socket connected:", socket.id);
     });
 
     socket.on("newMessage", (newMessage) => {
@@ -25,7 +25,6 @@ export const connectSocket = (userId, dispatch) => {
 
     socket.on("getOnlineUsers", (userIds) => {
       // You can dispatch to Redux if needed
-      console.log("Online users:", userIds);
       dispatch(setOnlineUsers(userIds));
     });
   }
