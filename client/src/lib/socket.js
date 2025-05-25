@@ -9,7 +9,7 @@ export const connectSocket = (userId, dispatch) => {
     socket = io(
       import.meta.env.MODE === "development"
         ? `${import.meta.env.VITE_API_URL}`
-        : "/",
+        : "/https://heichat-server.vercel.app",
       {
         query: { userId },
       }
